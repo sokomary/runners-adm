@@ -1,7 +1,10 @@
 const routs = {
   LOGIN: "/login",
-  START: "/start",
   ENTER_CODE: "/code",
+  USERS: "/users",
+  VALUATION: " /valuation",
+  ZONES: " /zones",
+  CAMPAIGNS: "/campaigns",
 };
 
 export { routs };

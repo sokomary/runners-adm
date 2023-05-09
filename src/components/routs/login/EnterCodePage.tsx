@@ -4,12 +4,12 @@ import styled from "styled-components";
 import { useField } from "react-final-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Form } from "../ui/form/Form";
-import { routs } from "../../routs";
-import { ToastContent } from "../ui/ToastContent";
-import { InputField } from "../ui/form/fields/InputField";
-import { Container } from "../ui/Container";
-import { SubmitButton } from "../ui/form/fields/SubmitButton";
+import { Form } from "../../ui/form/Form";
+import { routs } from "../../../routs";
+import { ToastContent } from "../../ui/ToastContent";
+import { InputField } from "../../ui/form/fields/InputField";
+import { Container } from "../../ui/Container";
+import { SubmitButton } from "../../ui/form/fields/SubmitButton";
 
 interface Code {
   d0: string;
@@ -28,7 +28,7 @@ const EnterCodePage = () => {
       onSubmit={(values: any) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const code = getCode(values as Code);
-        navigate(routs.START);
+        navigate(routs.USERS);
       }}
     >
       <MainContainer vertical gap={30}>

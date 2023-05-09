@@ -7,7 +7,7 @@ import { Container } from "./ui/Container";
 
 const Header = () => (
   <HeaderContainer>
-    <NavLink to={routs.START}>
+    <NavLink to={routs.USERS}>
       <Logo />
     </NavLink>
   </HeaderContainer>

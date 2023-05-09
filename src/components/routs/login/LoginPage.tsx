@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { FormattedMessage, useIntl } from "react-intl";
-import { Form } from "../ui/form/Form";
-import { routs } from "../../routs";
-import { Container } from "../ui/Container";
-import { InputField } from "../ui/form/fields/InputField";
-import { SubmitButton } from "../ui/form/fields/SubmitButton";
+import { Form } from "../../ui/form/Form";
+import { routs } from "../../../routs";
+import { Container } from "../../ui/Container";
+import { InputField } from "../../ui/form/fields/InputField";
+import { SubmitButton } from "../../ui/form/fields/SubmitButton";
 
 const LoginPage = () => {
   const intl = useIntl();

@@ -15,8 +15,9 @@ import StarsBackground from "./assets/stars_background.png";
 import Background from "./assets/background.png";
 import { Header } from "./components/Header";
 import { routs } from "./routs";
-import { LoginPage } from "./components/login/LoginPage";
-import { EnterCodePage } from "./components/login/EnterCodePage";
+import { LoginPage } from "./components/routs/login/LoginPage";
+import { EnterCodePage } from "./components/routs/login/EnterCodePage";
+import { UsersPage } from "./components/routs/users/UsersPage";
 
 declare global {
   namespace FormatjsIntl {
@@ -41,15 +42,14 @@ const RouterContent = () => {
   return (
     <BackgroundPage
       background={
-        [routs.LOGIN, routs.START].includes(navigate.pathname)
-          ? StarsBackground
-          : Background
+        [routs.LOGIN].includes(navigate.pathname) ? StarsBackground : Background
       }
     >
       <ToastContainer position="bottom-right" theme="colored" />
       <Header />
       <Routes>
         <Route path={routs.LOGIN} element={<LoginPage />} />
+        <Route path={routs.USERS} element={<UsersPage />} />
         <Route path={routs.ENTER_CODE} element={<EnterCodePage />} />
         {/* <Route path ="*" element={<Navigate to={{ pathname: routs.START }} />} /> */}
       </Routes>

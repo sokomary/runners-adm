@@ -49,6 +49,23 @@ const messages = {
   "users.couriers.table.headers.town": "Город",
   "users.couriers.table.headers.birthDate": "Дата рождения",
   "users.couriers.table.headers.lastAuthDate": "Последняя аутентификация",
+
+  "valuations.empty": "Отзывов не нашлось",
+  "valuations.count": "Всего {count}",
+  "valuations.current.count": "Нашлось {count}",
+  "valuations.fields.value": "Оценка",
+  "valuations.fields.text": "Отзыв",
+  "valuations.fields.category": "Категория",
+  "valuations.fields.category.value": `{
+    category, select,
+    COMPANY {Компания}
+    COURIER {Курьер}
+    other {}
+  }`,
+  "valuations.fields.date": "Дата",
+  "valuations.filters.date": "Дата",
+  "valuations.filters.estimation": "Оценка",
+  "valuations.filters.category": "Категория",
 };
 
 export { messages };

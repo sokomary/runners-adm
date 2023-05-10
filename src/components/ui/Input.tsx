@@ -35,7 +35,7 @@ interface InputProps {
 }
 
 const Input: FC<InputProps> = forwardRef((props, ref) => (
-  <Container className={props.className} vertical gap={5}>
+  <Container vertical gap={5}>
     {props.label && <div>{props.label}</div>}
     {!props.multiline ? (
       <Container>

@@ -383,7 +383,19 @@ const allNotifications: Notification[] = [
   },
 ];
 
-const allFeedbacks: Feedback[] = [];
+const feedback1: Feedback = {
+  estimation: 5,
+  source: Source.COMPANY,
+  text: "Нормально",
+  date: moment("2023-01-01T13:43"),
+};
+const feedback2: Feedback = {
+  estimation: 3,
+  source: Source.COURIER,
+  text: "Неудобно отправлять запросы",
+  date: moment("2023-01-01T13:43"),
+};
+const allFeedbacks: Feedback[] = [feedback1, feedback2];
 // -------------------------------------------------------------------- couriers
 const getCurrentCourier = () => courier1;
 const getCourierByLogin = (login: string) =>

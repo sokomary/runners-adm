@@ -2,7 +2,7 @@ const routs = {
   LOGIN: "/login",
   ENTER_CODE: "/code",
   USERS: "/users",
-  VALUATION: " /valuation",
+  VALUATION: "/valuation",
   ZONES: " /zones",
   CAMPAIGNS: "/campaigns",
 };

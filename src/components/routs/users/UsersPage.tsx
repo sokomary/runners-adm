@@ -150,7 +150,7 @@ const Companies = () => {
         />
       </CompaniesTitle>
       <Container vertical gap={10}>
-        <Container gap={10}>
+        <FiltersContainer gap={10}>
           <Container vertical gap={5}>
             <DateLabel>
               <FormattedMessage id="users.companies.filters.date" />
@@ -166,7 +166,7 @@ const Companies = () => {
             value={text}
             onChange={setText}
           />
-        </Container>
+        </FiltersContainer>
         {!currentCompanies.length ? (
           <EmptyText>
             <FormattedMessage id="users.companies.empty" />
@@ -359,7 +359,7 @@ const Couriers = () => {
         />
       </CompaniesTitle>
       <Container vertical gap={10}>
-        <Container gap={10}>
+        <FiltersContainer gap={10}>
           <Container vertical gap={5}>
             <DateLabel>
               <FormattedMessage id="users.couriers.filters.date" />
@@ -390,7 +390,7 @@ const Couriers = () => {
             value={dateBirthEnd}
             onChange={setBirthDateEnd}
           />
-        </Container>
+        </FiltersContainer>
         {!currentCouriers.length ? (
           <EmptyText>
             <FormattedMessage id="users.couriers.empty" />
@@ -525,6 +525,10 @@ const ArrowIcon = styled(ArrowSvg)<{ desc: boolean }>`
   height: 14px;
   width: 14px;
   align-self: center;
+`;
+
+const FiltersContainer = styled(Container)`
+  align-items: flex-end;
 `;
 
 export { UsersPage };

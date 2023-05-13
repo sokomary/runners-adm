@@ -17,7 +17,7 @@ const messages = {
     users {Пользователи}
     valuations {Оценки}
     campaigns {Кампании}
-    zones {Территории}
+    zones {Города}
     other {}
   }`,
   "menu.logout": "Выйти",
@@ -66,6 +66,14 @@ const messages = {
   "valuations.filters.date": "Дата",
   "valuations.filters.estimation": "Оценка",
   "valuations.filters.category": "Категория",
+
+  "towns.filters.text": "Название",
+  "towns.empty": "Городов не нашлось",
+  "towns.current.count": "Найдено {count}",
+  "towns.fields.name": "Название",
+  "towns.fields.companies": "Компании",
+  "towns.fields.couriers": "Курьеры",
+  "towns.fields.campaigns": "Кампании",
 };
 
 export { messages };

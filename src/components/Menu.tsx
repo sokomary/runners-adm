@@ -33,7 +33,7 @@ const items: {
   {
     name: "zones",
     icon: <EarthSvg />,
-    route: routs.ZONES,
+    route: routs.TOWNS,
   },
 ];
 

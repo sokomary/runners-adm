@@ -5,6 +5,7 @@ interface Company {
   id: number;
   name: string;
   phone: string;
+  town: string;
   address: string;
   description: string;
   email: string;

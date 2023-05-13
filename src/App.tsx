@@ -19,6 +19,7 @@ import { LoginPage } from "./components/routs/login/LoginPage";
 import { EnterCodePage } from "./components/routs/login/EnterCodePage";
 import { UsersPage } from "./components/routs/users/UsersPage";
 import { ValuationsPage } from "./components/routs/valuations/ValuationsPage";
+import { TownsPage } from "./components/routs/towns/TownsPage";
 
 declare global {
   namespace FormatjsIntl {
@@ -53,7 +54,8 @@ const RouterContent = () => {
         <Route path={routs.USERS} element={<UsersPage />} />
         <Route path={routs.ENTER_CODE} element={<EnterCodePage />} />
         <Route path={routs.VALUATION} element={<ValuationsPage />} />
-        {/* <Route path ="*" element={<Navigate to={{ pathname: routs.START }} />} /> */}
+        <Route path={routs.TOWNS} element={<TownsPage />} />
+        {/* <Route path ="*" ele ment={<Navigate to={{ pathname: routs.START }} />} /> */}
       </Routes>
     </BackgroundPage>
   );

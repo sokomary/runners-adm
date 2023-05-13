@@ -2,6 +2,7 @@ interface Address {
   name: string;
   latitude: number;
   longitude: number;
+  town: string;
 }
 
 const getCenter = (numbers: number[]) =>

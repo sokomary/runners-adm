@@ -99,6 +99,7 @@ const company1: Company = {
   paymentMethodToken: "xxxxxx",
   registrationDate: moment("2023-07-07"),
   creationDate: moment("2000-03-03"),
+  town: "Москва",
 };
 const allCompanies = [company1];
 const currentUser: (Courier | Company)[] = [];
@@ -107,68 +108,81 @@ const address1: Address = {
   latitude: 56.732257,
   longitude: 37.147044,
   name: "Адрес 1",
+  town: "Дубна",
 };
 const address2: Address = {
   latitude: 56.731971,
   longitude: 37.146343,
   name: "Адрес 2",
+  town: "Дубна",
 };
 const address3: Address = {
   latitude: 56.732568,
   longitude: 37.147736,
   name: "Адрес 3",
+  town: "Дубна",
 };
 const address4: Address = {
   latitude: 56.731506,
   longitude: 37.147053,
   name: "Адрес 4",
+  town: "Дубна",
 };
 const address5: Address = {
   latitude: 56.731753,
   longitude: 37.147709,
   name: "Адрес 5",
+  town: "Дубна",
 };
 const address6: Address = {
   latitude: 56.732059,
   longitude: 37.148409,
   name: "Адрес 6",
+  town: "Дубна",
 };
 
 const address7: Address = {
   latitude: 56.745853,
   longitude: 37.189902,
   name: "Адрес 7",
+  town: "Дубна",
 };
 const address8: Address = {
   latitude: 56.745957,
   longitude: 37.190576,
   name: "Адрес 8",
+  town: "Дубна",
 };
 const address9: Address = {
   latitude: 56.745606,
   longitude: 37.189516,
   name: "Адрес 9",
+  town: "Дубна",
 };
 const address10: Address = {
   latitude: 56.745192,
   longitude: 37.189875,
   name: "Адрес 10",
+  town: "Дубна",
 };
 const address11: Address = {
   latitude: 56.74534,
   longitude: 37.190379,
   name: "Адрес 11",
+  town: "Дубна",
 };
 const address12: Address = {
   latitude: 56.745547,
   longitude: 37.190909,
   name: "Адрес 12",
+  town: "Дубна",
 };
 
 const address13: Address = {
   latitude: 56.712343,
   longitude: 36.776893,
   name: "Конаково 1",
+  town: "Конаково",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -986,6 +1000,7 @@ export {
   company1,
   allNotifications,
   allCampaigns,
+  allCampaignAddresses,
   allCouriers,
   campaign6,
   getCurrentCompany,

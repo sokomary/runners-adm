@@ -275,6 +275,19 @@ const campaign6: Campaign = {
   courierEstimation: undefined,
 };
 
+const campaign7: Campaign = {
+  id: 6,
+  company: company1,
+  name: "Отмененная кампания",
+  dateStart: moment("2022-01-21"),
+  dateEnd: moment("2022-02-21"),
+  volume: 1000,
+  valuation: 500,
+  courier: undefined,
+  status: CampaignStatus.CANCELLED,
+  courierEstimation: undefined,
+};
+
 const allCampaignAddresses: CampaignAddress[] = [
   { campaign: campaign1, address: address1, done: true, photos: [] },
   { campaign: campaign1, address: address2, done: true, photos: [] },
@@ -312,6 +325,8 @@ const allCampaignAddresses: CampaignAddress[] = [
   { campaign: campaign5, address: address12, done: false, photos: [] },
 
   { campaign: campaign6, address: address13, done: false, photos: [] },
+
+  { campaign: campaign7, address: address13, done: false, photos: [] },
 ];
 
 const allAsks: CampaignAsk[] = [
@@ -373,6 +388,7 @@ const allCampaigns = [
   campaign4,
   campaign5,
   campaign6,
+  campaign7,
 ];
 
 // все уведомления
@@ -394,6 +410,15 @@ const allNotifications: Notification[] = [
     datetime: moment("2023-03-03T13:43:00"),
     status: NotificationStatus.DELIVERED,
     type: CompanyNotificationType.CAMPAIGN_END,
+  },
+  {
+    id: 2,
+    source: Source.COURIER,
+    campaign: campaign7,
+    courier: courier1,
+    datetime: moment("2023-03-03T13:43:00"),
+    status: NotificationStatus.DELIVERED,
+    type: CompanyNotificationType.CAMPAIGN_CANCELLED,
   },
 ];
 

@@ -14,12 +14,14 @@ import { BackgroundPage } from "./components/ui/BackgroundPage";
 import StarsBackground from "./assets/stars_background.png";
 import Background from "./assets/background.png";
 import { Header } from "./components/Header";
+import "react-tooltip/dist/react-tooltip.css";
 import { routs } from "./routs";
 import { LoginPage } from "./components/routs/login/LoginPage";
 import { EnterCodePage } from "./components/routs/login/EnterCodePage";
 import { UsersPage } from "./components/routs/users/UsersPage";
 import { ValuationsPage } from "./components/routs/valuations/ValuationsPage";
 import { TownsPage } from "./components/routs/towns/TownsPage";
+import { CampaignsPage } from "./components/routs/campaigns/CampaignsPage";
 
 declare global {
   namespace FormatjsIntl {
@@ -55,6 +57,7 @@ const RouterContent = () => {
         <Route path={routs.ENTER_CODE} element={<EnterCodePage />} />
         <Route path={routs.VALUATION} element={<ValuationsPage />} />
         <Route path={routs.TOWNS} element={<TownsPage />} />
+        <Route path={routs.CAMPAIGNS} element={<CampaignsPage />} />
         {/* <Route path ="*" ele ment={<Navigate to={{ pathname: routs.START }} />} /> */}
       </Routes>
     </BackgroundPage>

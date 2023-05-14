@@ -74,6 +74,48 @@ const messages = {
   "towns.fields.companies": "Компании",
   "towns.fields.couriers": "Курьеры",
   "towns.fields.campaigns": "Кампании",
+
+  "campaigns.title": "Кампании",
+  "campaigns.count": "Всего {count}",
+  "campaigns.filter.all": "все",
+  "campaigns.filter.done": "завершенные",
+  "campaigns.filter.inprogress": "в работе",
+  "campaigns.filter.requested": "запрошенные",
+  "campaigns.filter.offered": "предложенные",
+  "campaigns.filter.nocouriers": "без курьеров",
+  "campaigns.filter.checking": "на проверке",
+  "campaigns.filter.cancelled": "отмененные",
+  "campaigns.empty": "Кампаний нет",
+  "campaigns.fields.id": "Id",
+  "campaigns.fields.name": "Название",
+  "campaigns.fields.companyId": "Id компании",
+  "campaigns.fields.courierId": "Id курьера",
+  "campaigns.fields.dateStart": "Начало",
+  "campaigns.fields.dateEnd": "Конец",
+  "campaigns.fields.towns": "Города",
+  "campaigns.fields.status": "Статус",
+
+  "campaigns.fields.statuses": `{
+    status, select,
+      WAITING_FOR_COURIER {Курьер не назначен}
+      WAITING_FOR_START {Курьер назначен, исполнение не начато}
+      IN_PROGRESS {В процессе}
+      COMPLETE {Завершена}
+      CANCELLED {Отменена}
+      WAITING_FOR_CHECK {На проверке}
+      other {}
+  }`,
+  "campaigns.filter.courier": "без курьера",
+  "campaigns.filter.start": "ожидает начала",
+  "campaigns.filters.text": "Название, имя компании или часть адреса",
+  "campaigns.filters.date": "Период",
+  "campaigns.current.count": "Найдено {count}",
+  "campaigns.cancelled.by": `{
+    source, select,
+    COMPANY {Отменена компанией}
+    COURIER {Отменена курьером}
+    other {}
+  }`,
 };
 
 export { messages };

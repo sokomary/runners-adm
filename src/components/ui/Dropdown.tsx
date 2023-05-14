@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import styled from "styled-components";
 import { ReactComponent as DownIcon } from "../../assets/icons/down.svg";
 import { Input } from "./Input";
@@ -11,12 +11,10 @@ interface Option {
 const Dropdown: FC<{
   options: Option[];
   placeholder?: string;
-  value: any;
+  value?: Option;
   onChange: (value: any) => void;
 }> = (props) => {
   const [optionsOpen, setOptionsOpen] = useState(false);
-
-  useEffect(() => console.log(props.value));
 
   return (
     <DropdownContainer vertical gap={0}>
@@ -26,7 +24,7 @@ const Dropdown: FC<{
         onClick={() => setOptionsOpen(!optionsOpen)}
       >
         <PointableField
-          value={props.value?.label || props.placeholder}
+          value={props.value?.label || props.placeholder || ""}
           placeholder={props.placeholder}
         />
         <StyledIcon open={optionsOpen} />
@@ -35,6 +33,7 @@ const Dropdown: FC<{
         <Items vertical>
           {props.options.map((option, index) => (
             <Item
+              selected={props.value?.value === option.value}
               onClick={() => {
                 props.onChange(
                   !props.value || props.value?.value !== option.value
@@ -72,8 +71,9 @@ const StyledIcon = styled(DownIcon)<{ open: boolean }>`
   ${(props) => props.open && "transform: rotate(180deg);"}
 `;
 
-const Item = styled.div`
+const Item = styled.div<{ selected: boolean }>`
   cursor: pointer;
+  color: ${(props) => (props.selected ? "#e9967a" : "white")};
   padding: 10px;
   &:hover {
     color: #e9967a;
